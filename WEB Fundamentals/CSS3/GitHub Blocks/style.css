@@ -1,0 +1,38 @@
+.container{
+    width: 1000px;
+    height: 1000px;
+    background-color: azure;
+    margin: 0px auto;
+    text-align: center;
+    border-top: black solid 2px;
+
+
+
+}
+h1{
+
+    
+    font-weight: bold;
+}
+
+
+.one{
+    background-color: cyan;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.two{
+    background-color: #ff008c;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.third{
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+}
