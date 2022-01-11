@@ -1,0 +1,22 @@
+
+.card{
+    height: 250px;
+    width: 600px;
+    margin: 0 auto;
+    border-width: 2px ;
+    border-color: #a8dce4;
+    margin-top: 20px;
+}
+
+.header{
+    background-color: #179fb4;
+    height: 50px;
+    width: inherit;
+}
+
+.body{
+    background-color: white;
+    height: 200px;
+    width: inherit;
+    padding: 10px;
+}
