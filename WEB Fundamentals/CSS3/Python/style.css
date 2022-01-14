@@ -1,0 +1,147 @@
+.website{
+    background-color: #245076;
+    height: 900px;
+}
+
+.w{
+    color: white;
+}
+
+#w{
+    color: white;
+}
+.header{
+    display: flex;
+    justify-content: space-around;
+}  
+
+#yellow{
+    color: yellow;
+}
+
+#color{
+    color: yellow;
+}
+
+.btn{
+    background-color: #245076;
+    color: white;
+    width: 40px;
+    height: 21px;
+}
+#y{
+    color: white;
+    font-style: normal;
+    margin-left: 30px;
+}
+.search{
+    border: 2px black;
+    display: flex;
+    outline: 20px solid #444444;
+}
+nav{
+    display: flex;
+    background-color: #487ead;
+    color: white;
+    justify-content: space-around;
+    width: 1000px;  
+    height: 50px;
+    align-items: center; 
+    margin-left: 250px;
+    text-decoration: none;
+}
+
+.no-line{
+    color: white;
+    text-decoration: none;
+}
+
+aside{
+    
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    margin-top: 25px;
+    align-items: center;
+    margin-right: 200px;
+    text-decoration: underline;    
+}
+
+    
+p{
+    align-items: center;  
+    color: white;
+    margin-right: 200px;
+}
+
+.content {
+    align-items: center;
+    color: yellow;
+    font-style: italic;
+    margin-left: 70px;
+}
+
+.main-container {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 300px;
+    width: ;
+}
+
+#y{
+    color:white;
+}
+
+.bottom{
+    display: flex;
+    background-color: white;
+    justify-content: space-around;    
+}
+.bottom-1{
+    color: black;
+    align-items: center;
+}
+.bottom-2{
+    color: black;
+}
+
+.blue{
+    color: #c2d8ed;
+    text-decoration: none;
+}
+.left{
+    
+    margin-left: 265px;
+    align-items:center;
+}
+
+footer{
+    display: flex;
+    background-color: #265782;
+    height: 100px;
+    justify-content: space-around;    
+    width: 1348px;
+}
+
+.footer-color{
+    display: flex;
+    align-items: center;
+    color: #3a72a3;
+    text-decoration: none;   
+}
+
+h3{
+    margin-left: 25px;
+}
+
+a{
+    color: #b9d4e9;
+    text-decoration: none;   
+}
+
+
+
+
+
+
+
