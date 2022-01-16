@@ -1,0 +1,29 @@
+.box{
+    border: 2px solid black;
+    height: 115px;
+    width: 450px;
+}
+
+
+.card{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+button{
+    background-color: yellow;
+    color: black;
+    box-shadow: 2px 2px black;
+    width: 55px;
+    height: 35px;
+    font-size: 20px;
+    margin-left: 35px;
+}
+span{
+    font-size: 18px;
+    font-weight: bold;
+}
+p{
+    font-weight: bold;
+    margin: 0px 0px 10px 38px;
+}
