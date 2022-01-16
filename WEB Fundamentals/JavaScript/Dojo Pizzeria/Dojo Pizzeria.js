@@ -14,7 +14,7 @@ var pizza2=pizzaOven("hand tossed","marinara",["mozzarella", "feta"],["mushrooms
 console.log(pizza2);
 
 var mypizza=pizzaOven("thick","traditional","feta",["pepperoni","olives", "sausage"]);
-console.log(mupizaa);
+console.log(mypizaa);
 
 var mypizza2=pizzaOven("tthin","marinara","ozzarella",["pepperoni","olives"]);
-console.log(mupizaa2);
+console.log(mypizaa2);
