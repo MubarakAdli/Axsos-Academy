@@ -1,0 +1,279 @@
+.mainblock{
+    width: 900px;
+    height: 600px;
+    outline: 3px solid black;
+    margin: 0 auto;
+}
+
+
+
+
+.mainbox{
+    width: 1000px;
+    height: 1000px;
+    outline: 10px solid ;
+    display: flex;
+    justify-content: flex-start;
+    vertical-align: top;
+    justify-content: space-around;
+    margin-top: 200px;
+}
+
+.container{
+    background-color: #333333;
+    width: 900px;
+    height: 50px;
+    margin: 0px auto;
+    display: flex;
+    align-items: center;
+    vertical-align: top;
+    justify-content: space-between;
+
+}
+.profile{
+    font-size: 30px;
+    color: white;
+}
+.home{
+    color: white;
+    text-decoration: none;
+}
+
+.nav-links{
+    display: flex;
+    justify-content: center;
+    width: 400px;
+    align-items: center;
+    margin-bottom: 10px;
+    color: white;
+    justify-content: space-between;
+    margin-left: 115px;
+    text-decoration: none;
+    
+}
+
+.active{
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+}
+a{
+
+    text-decoration: underline;
+    
+}
+.btn{
+    background-color: #17a2b8;
+    color: white;
+    font-weight: bold;
+    border-width: 2px;
+    border-color: black;
+    box-shadow: 2px 2px black;
+    margin-right: 125px;
+    text-decoration: none;
+}
+ul li{
+    display: flex;
+}
+
+.card{
+    height: 250px;
+    width: 400px;
+    margin: 0 auto;
+    outline: 2px solid #a8dce4;
+    margin-top: 20px;
+    padding-bottom: 10px;
+}
+
+.header{
+    background-color: #179fb4;
+    height: 70px;
+    width: 400px;
+}
+
+.body{
+    background-color: rgb(255, 255, 255);
+    height: 180px;
+    width: 380px;
+    padding: 10px;
+
+
+}
+.img{
+    height: 60px;
+    width: 60px;
+    position: absolute ;
+    top: 110px;
+    left: 400px;
+
+}
+.location{
+    height: 20px;
+}
+.settings{
+    height: 20px;
+}
+h1{
+    font-size: 20px;
+}
+#education{
+    width: 392px;
+    height: 30px;
+    background-color: #333333;
+    color: white;
+    align-items: center;
+    padding-left: 10px;
+    padding-top: 5px;
+}
+.education{
+    width: 400px;
+    height: 150px;
+    outline: 2px solid black;  
+}
+.txt{
+    padding: 10px;
+}
+.font{
+    font-weight: bold;
+}
+#p2{
+    font-style: italic;
+}
+
+}
+.my{
+    width: 50px;
+    height: 22px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    background-color: #cccccc;
+}
+.headertop{
+    width: 200px;
+    height: 30px;
+    background-color:#333333;
+    padding-right: 5px;
+    padding-left: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+
+    
+}
+.comp1{
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    padding: 5px;
+
+}
+.comp2{
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    padding: 5px;
+
+
+}
+.connection{
+    width: 210px;
+    height: 120px;
+    outline: 2px solid black;
+    vertical-align: top;
+    margin-top: 20px;
+    margin-left: 20px;
+
+}
+
+#todd{
+    margin-top: 0px;
+}
+#phil{
+    margin-top: 0px;
+}
+.headertop2{
+    width: 200px;
+    height: 30px;
+    background-color:#333333;
+    padding-right: 5px;
+    padding-left: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;  
+}
+.comp1-2{
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    padding: 5px;
+}
+.comp2-2{
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    padding: 5px;
+}
+.comp2-3{
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    padding: 5px;
+}
+.comp2-4{
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+.connection2{
+    width: 210px;
+    height: 220px;
+    outline: 2px solid black;
+    
+
+}
+
+#adrien{
+    margin-top: 0px;
+}
+#anne{
+    margin-top: 0px;
+}
+#alayne{
+    margin-top: 0px;
+}
+#arry{
+    margin-top: 0px;
+}
+#s3{
+    width: 50px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    background-color: #cccccc;
+    font-size: 17px;
+}
+.block1{
+    width: 600px;
+    height: 800px;
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 150px;
+}
+
+.block2{
+    width: 230px;
+    height: 800px;
+    display: flex;
+    justify-content: flex-end;
+    
+}
+.white{
+    color: white;
+}
+
