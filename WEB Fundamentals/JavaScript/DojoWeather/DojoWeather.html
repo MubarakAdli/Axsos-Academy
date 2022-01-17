@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="DojoWeather.css">
+</head>
+<body>
+    <nav>
+        <h2>DojoWeather</h2>
+        <a onclick="dis(this)" href="http://facebook.com">Burbank</a>
+        <a onclick="dis(this)" href="http://facebook.com">Chicago</a>
+        <a onclick="dis(this)" href="http://facebook.com">Dallas</a>
+    </nav>
+    <div class="city">
+        <h1>San Jose</h1>
+        <p>show tempresure in
+            <select onchange="convert(this)">
+                <option value="c">°C</option>
+                <option value="f">°F</option>
+            </select>
+        </p>
+    </div>
+    <article>
+        <div class="box">
+            <h2>Today</h2>
+            <img src="some_rain.png" width="100px" height="115px">
+            <h4>some rain</h4>
+            <div class="first">
+                <h3 class="red">°<span class="degree">24</span></h3>
+                <h3>°<span class="degree"><span class="degree">18</span></span></h3>
+            </div>
+        </div>
+        <div class="box">
+            <h2>Tomorrow</h2>
+            <img src="some_sun.png" width="100px" height="115px">
+            <h4>some sun</h4>
+            <div class="first">
+                <h3 class="red">°<span class="degree"><span class="degree">27</span></span></h3>
+                <h3>°<span class="degree"><span class="degree">19</span></span></h3>
+            </div>
+        </div>
+        <div class="box">
+            <h2>Friday</h2>
+            <img src="some_clouds.png" width="100px" height="115px">
+            <h4>some cloud</h4>
+            <div class="first">
+                <h3 class="red">°<span class="degree">21</span></h3>
+                <h3>°<span class="degree">16</span></h3>
+            </div>
+        </div>
+        <div class="box">
+            <h2>Saturday</h2>
+            <img src="some_sun.png" width="100px" height="115px">
+            <h4>some sun</h4>
+            <div class="first">
+                <h3 class="red">°<span class="degree">26</span></h3>
+                <h3>°<span class="degree">21</span></h3>
+            </div>
+        </div>
+    </article>
+    <div>
+        <footer>
+            <img src="cookie.png" height="50px" width="50px">
+            <p><strong id="e">Stop! Cookie time</strong><br>
+                We use cookies (sadly not the edible ones) to perzonalize<br>
+                content and ads,to provide social media features and to<br>
+                analyse our traffic.<a href="http://facebook.com"><strong>Read more</strong>...</a></p>
+            <button onclick="hide()"> I Accept</button>
+        </footer>
+    </div>
+    <script src="DojoWeather.js"></script>
+</body>
+</html>
