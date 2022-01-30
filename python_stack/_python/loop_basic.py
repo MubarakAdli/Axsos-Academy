@@ -1,14 +1,14 @@
 # Print all integers from 0 to 150
-for x in range(0, 150, 1):
+for x in range(0, 151, 1):
     print(x)
 
 #Multiples of Five
-    for x in range(5, 1000, 1):
+    for x in range(5, 1001, 1):
      if x%5==0:
-        print("Coding Dojo")
+        print(x)
 
 #Counting, the Dojo Way
-     for x in range(5, 100, 1):
+     for x in range(5, 101, 1):
       if x%10==0:
          print("Coding Dojo")
       elif x%5==0:
@@ -16,7 +16,7 @@ for x in range(0, 150, 1):
 
 
     #Whoa. That Sucker's Huge
-     for x in range(0, 500000, 1):  
+     for x in range(0, 500001, 1):  
       if x%2!=0:
        sum=0+x 
        print(sum)
