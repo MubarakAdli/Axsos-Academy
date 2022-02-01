@@ -14,8 +14,8 @@ class bankaccount:
         self.balance=self.balance*(self.interest_rate + 1)
         return self.balance
 
-account_1=bankaccount(0.02,500)
-account_2=bankaccount(0.03,700)
+account_1=bankaccount(0.02,1000)
+account_2=bankaccount(0.03,900)
 
 account_1.deposit(300)
 account_1.deposit(200)
