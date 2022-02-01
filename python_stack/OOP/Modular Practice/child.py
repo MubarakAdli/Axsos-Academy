@@ -1,0 +1,2 @@
+import parnt
+print(locals())
