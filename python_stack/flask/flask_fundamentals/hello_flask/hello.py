@@ -4,11 +4,9 @@ app = Flask(__name__)
 
 @app.route('/')          
 def hello():
-    print("in the hello function")
     return ("Hello World!")
 @app.route('/dojo')          
 def hello_1():
-    print("in the hello function")
     return ("Dojo")
 @app.route('/<name>') 
 def hello_person(name):
