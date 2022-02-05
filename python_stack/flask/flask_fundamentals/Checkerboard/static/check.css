@@ -1,0 +1,33 @@
+body{
+    display: flex;
+}
+
+table{
+    border: 2px solid black;
+    border-collapse: collapse;
+    margin: 10px;
+}
+
+.red {
+    background-color:red;
+    width: 40px;
+    height: 40px;
+}
+
+.black {
+    background-color: black;
+    width: 40px;
+    height: 40px;
+} 
+
+.white {
+    background-color: white;
+    width: 40px;
+    height: 40px;
+}
+
+.green {
+    background-color: green;
+    width: 40px;
+    height: 40px;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='check.css') }}">
+</head>
+<body>
+    <div>
+        <table>
+            {% for i in range(4): %}
+            <tr>
+                {% for i in range(4): %}
+                <td class="red"></td>
+                <td class="black"></td>
+                {% endfor %}
+            </tr>
+            <tr>
+                {% for i in range(4): %}
+                <td class="black"></td>
+                <td class="red"></td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+    <div>
+        <table>
+            {% for i in range(4): %}
+            <tr>
+                {% for i in range(4): %}
+                <td class="white"></td>
+                <td class="green"></td>
+                {% endfor %}
+            </tr>
+            <tr>
+                {% for i in range(4): %}
+                <td class="green"></td>
+                <td class="white"></td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+</body>
+</html>
