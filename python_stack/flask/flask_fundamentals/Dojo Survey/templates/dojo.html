@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    form{
+        border: 2px solid black;
+        width: 350px;
+        text-align:center;
+        padding: 10px;
+    }
+
+    .but{
+        background-color: #74a2ac;
+        color: white;
+        box-shadow: 3px 3px 3px;
+        margin-left: 260px;
+    }
+
+</style>
+
+<body>
+    <form action='/users' method='post'>
+        <label>Your Name:</label>
+        <input type='text' name='name'><br>
+        <div>
+            <label for="loc">Dojo Location</label>
+            <select name="location" id="loc">
+                <option value="San Jose">San Jose</option>
+                <option value="Dallas">Dallas</option>
+            </select>
+        </div><br>
+        <div>
+            <label for="lang">Favorite language:</label>
+            <select name="language" id="loc">
+                <option value="Python">Python</option>
+                <option value="HTML">HTML</option>
+            </select>
+        </div><br>
+        <p>Comment(optional)</p>
+        <textarea name="comment" cols="40" rows="5"></textarea>
+        <p><input class="but" type='submit' value='Button'></p>
+    </form>
+</body>
+
+</html>
