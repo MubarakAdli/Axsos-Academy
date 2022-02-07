@@ -1,0 +1,23 @@
+body {
+    outline: 2px solid black;
+    width: 350px;
+    text-align: center;
+    padding: 10px;
+}
+.but {
+    background-color: #74a2ac;
+    color: white;
+    box-shadow: 3px 3px 3px;
+    margin-left: 260px;
+}
+
+.blue {
+    background-color: #74a2ac;
+    color: white;
+    box-shadow: 3px 3px 3px;
+    margin-left: 260px;
+}
+#p{
+    text-align: left;
+    margin-left: 20px;
+}
