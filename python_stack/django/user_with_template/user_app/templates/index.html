@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .f{
+            display: flex;
+        }
+        .s{
+            display: flex;
+        }
+        
+        table,tr,td{
+            border: 1px solid black;
+        }
+        table{
+            width: 350px;
+        }
+        .form{
+            width: 520px;
+            text-align: center;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <h1>All the users</h1>
+    <table>
+        <tr>
+            <td>Name</td>
+            <td>Email</td>
+            <td>Age</td>
+        </tr>
+        {%for x in users%}
+        <tr>
+            <td>{{x.first_name}} {{x.last_name}}</td>
+            <td>{{x.email_address}}</td>
+            <td>{{x.age}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <hr>
+    <div class="form">
+    <h2>Add a User</h2>
+    <form action="/process" method="post">
+    {%csrf_token%}
+    <div class="f">
+    <p>First Name:  <input type="text" name="first"></p>
+    <p>last Name:  <input type="text" name="last"></p>
+    </div>
+    <div class="s">
+    <p>Email  <input type="text" name="email_address"></p>
+    <p>Age  <input type="text" name="age"></p>
+    </div>
+    <button type="submit">Add</button>
+</form>
+</div>
+</body>
+
+</html>
