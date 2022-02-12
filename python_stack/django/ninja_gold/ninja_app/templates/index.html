@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ninja Gold</title>
+    <style>
+        .gold{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 230px;
+        }
+        .goldbox{
+            height: 30px;
+            width: 140px;
+            outline: 2px solid black;
+            text-align: center;
+        }
+        .container{
+            display:flex;
+            justify-content: space-between;
+            text-align: center;
+            width: 880px;
+        }
+        .box{
+            height: 155px;
+            width: 185px;
+            border: 2px solid black;
+        }
+        .bottom{
+            border: 2px solid black;
+            height: 150px;
+            width: 880px;
+        }
+        #gold{
+            margin-right: 110px;
+            margin-top: 6px;
+        }
+        button{
+            background-color: white;
+            box-shadow: 2px 2px 3px;
+        }
+        .bottom p{
+            margin-left: 20px;
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="gold">
+        <h3>Your Gold</h3>
+        <div class="goldbox"><p id="gold">{{request.session.total}}</p></div>
+    </div>
+    <div class="container">
+        <div class="box">
+            <form action="/process_money" method="post">
+                {%csrf_token%}
+                <input type="hidden" name="which_form" value="farm">
+                <h3>Farm</h3>
+            <p>(earn 10-20 coins)</p>
+            <button>Find Gold!</button>
+            </form>
+        </div>
+        <div class="box">
+            <form action="/process_money" method="post">
+                {%csrf_token%}
+                <input type="hidden" name="which_form" value="cave">
+                <h3>Cave</h3>
+            <p>(earn 5-10 coins)</p>
+            <button>Find Gold!</button>
+            </form>
+        </div>
+        <div class="box">
+            <form action="/process_money" method="post">
+                {%csrf_token%}
+                <input type="hidden" name="which_form" value="house">
+                <h3>House</h3>
+            <p>(earn 2-5 coins)</p>
+            <button>Find Gold!</button>
+            </form>
+        </div>
+        <div class="box">
+            <form action="/process_money" method="post">
+                {%csrf_token%}
+                <input type="hidden" name="which_form" value="casino">
+                <h3>Casino</h3>
+            <p>(earn 0-50 coins)</p>
+            <button>Find Gold!</button>
+            </form>
+        </div>
+    </div>
+    <p>Activites</p>
+    <div class="bottom">
+        {% if request.session.which_form == cave %}
+        <p>earned {{request.session.cave_earned}} from the cave! {{request.session.time}}</p> 
+        {% endif %}
+        {% if request.session.which_form == farm %}
+        <p>earned {{request.session.farm_earned}} from the farm! {{request.session.time}}</p> 
+        {% endif %}
+        {% if request.session.which_form == house %}
+        <p>earned {{request.session.house_earned}} from the house! {{request.session.time}}</p> 
+        {% endif %}
+        {% if request.session.which_form == casino %}
+        <p>earned {{request.session.casino_earned}} from the casino! {{request.session.time}}</p> 
+        {% endif %}
+    </div> 
+</body>
+</html>
