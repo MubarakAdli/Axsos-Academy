@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tv Show</title>
+
+    <style>
+        .info{
+            display: flex;
+        }
+
+        .date{
+            margin-left: 30px;
+        }
+
+        .width{
+            width: 340px;
+        }
+        form p{
+            margin-bottom: 5px;
+        }
+        textarea{
+            height: 70px;
+            width: 345px;
+        }
+        button{
+            background-color:white;
+            margin-left: 130px;
+            border: 2px solid black;
+            box-shadow: 2px 2px black;
+        }
+        
+    </style>
+
+</head>
+
+<body>
+    <h2>Add a New Show</h2>
+    <form action="/movie" method="post">
+        {% csrf_token %}
+        <p>Title : </p> <input class="width" type="text" name="title">
+        <div class="info">
+            <div>
+                <p>Network:</p>
+                <input type="text" name="network">
+            </div>
+            <div class="date">
+                <p>Release Date </p>
+                <input type="date" name="date">
+            </div>
+        </div>
+        <p>Description :</p>
+        <textarea name="desc" cols="30" rows="10"></textarea><br>
+        <button type="submit">Create</button>
+    </form>
+</body>
+
+</html>

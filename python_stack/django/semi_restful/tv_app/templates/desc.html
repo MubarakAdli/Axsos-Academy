@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+    .top {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        width: 500px;
+    }
+    #updated-time{
+        margin-top: 110px;
+    }
+    </style>
+</head>
+<body>
+    <div class="top">
+    <h2>TV Show {{this_show.id}}</h2>
+    <a href="http://127.0.0.1:8000/show">Go Back</a>
+    </div>
+    <p>Title: {{this_show.title}}</p>
+    <p>Network: {{this_show.network}}</p>
+    <p>Release Date: {{this_show.release_date}}</p>
+    <p>Description: {{this_show.desc}}</p>
+    <p id="updated-time">Last updated : {{this_show.updated_at}}</p>
+    <a href="http://127.0.0.1:8000/{{this_show.id}}/edit">Edit</a> | <a href="http://127.0.0.1:8000/remove/{{this_show.id}}">Delete</a>
+</body>
+</html>
