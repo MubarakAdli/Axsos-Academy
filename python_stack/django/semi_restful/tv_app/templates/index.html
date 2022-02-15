@@ -38,6 +38,14 @@
 </head>
 
 <body>
+    {% if messages %}
+    <ul class="messages">
+            {% for message in messages %}
+                <li {% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</li>
+            {% endfor %}
+    </ul>
+    {% endif %}
+    <p><a href="http://127.0.0.1:8000/">Go Back</a></p>
     <h2>Add a New Show</h2>
     <form action="/movie" method="post">
         {% csrf_token %}

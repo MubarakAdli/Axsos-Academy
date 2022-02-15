@@ -2,6 +2,7 @@
 from platform import release
 from django.shortcuts import redirect, render
 from .models import Show
+from django.contrib import messages
 
 def add_show(request):
     return render(request,"index.html")
@@ -13,8 +14,15 @@ def show(request):
         return render(request,'show.html',context)
 
 def movie(request):
-    this_show=Show.objects.create(title=request.POST['title'],network=request.POST['network'],release_date=request.POST['date'],desc=request.POST['desc'])
-    num=this_show.id
+    errors = Show.objects.basic_validator(request.POST)
+    if len(errors) > 0:
+        for key, value in errors.items():
+            messages.error(request, value)
+        return redirect('/new')
+    else:
+        this_show=Show.objects.create(title=request.POST['title'],network=request.POST['network'],release_date=request.POST['date'],desc=request.POST['desc'])
+        num=this_show.id
+        messages.success(request, "show successfully updated")
     return redirect(f"/{num}")
 
 def display(request,show_id):
