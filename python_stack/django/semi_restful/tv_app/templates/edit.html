@@ -52,19 +52,19 @@
     <form action="/edit/{{show.id}}" method="post" >
         {% csrf_token %}
         <p>Title</p>
-        <input class="width" type="text" name="title" placeholder="{{show.title}}">
+        <input class="width" type="text" name="title-1" >
         <div class="info">
         <div>
         <p>Network</p>
-        <input type="text" name="network" placeholder="{{show.network}}">
+        <input type="text" name="network-1" >
         </div>
         <div class="date">
         <p>Release Date</p>
-        <input type="date" name="date" placeholder="{{show.release_date}}">
+        <input type="date" name="date-1" >
         </div>
         </div>
         <p>Description</p>
-        <p><textarea name="desc" placeholder="{{show.desc}}"></textarea></p>
+        <p><textarea name="desc-1" ></textarea></p>
         <button>Update</button><br><br>
     </form>
     <a class="link" href="http://127.0.0.1:8000/{{show.id}}">GO To Show</a>

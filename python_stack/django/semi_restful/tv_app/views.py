@@ -33,10 +33,10 @@ def edit_info(request,show_id):
 
 def update_info(request,show_id):
     new_info=Show.objects.get(id=show_id)
-    new_info.title=request.POST['title']
-    new_info.network=request.POST['network']
-    new_info.date=request.POST['date']
-    new_info.desc=request.POST['desc']
+    new_info.title=request.POST['title-1']
+    new_info.network=request.POST['network-1']
+    new_info.date=request.POST['date-1']
+    new_info.desc=request.POST['desc-1']
     new_info.save()
     return redirect(f'/{show_id}')
 
