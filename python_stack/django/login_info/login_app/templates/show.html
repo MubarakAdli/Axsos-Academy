@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <style>
+
+        h2{
+            margin-left: 40px;
+        }
+        .main-form{
+            display: flex;
+            justify-content: space-evenly;
+        }
+        .email{
+            margin-left: 22px;
+        }
+        .email-1{
+            margin-left: 34px;
+        }
+        .first{
+            margin-left: 2px;
+        }
+        .last{
+            margin-left: 7px;
+        }
+
+        button{
+            background-color:white;
+            margin-left: 50px;
+            border: 2px solid black;
+            box-shadow: 2px 2px black;
+        }
+    </style>
+</head>
+
+<body>
+    {% if messages %}
+<ul class="messages">    
+    {% for message in messages %}    
+        <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>    
+    {% endfor %}
+</ul>
+{% endif %}
+    <div class="main-form">
+    <div class="form-1">
+    <h2>Registration</h2>
+    <form action="/reg" method="post">
+    {%csrf_token%}
+    <p>First Name:  <input class="fisrt" type="text" name="first"></p>
+    <p>last Name:  <input class="last" type="text" name="last"></p>
+    <p>Email:  <input class="email-1" type="email" name="email"></p>
+    <p>Password:  <input class="email" type="password" name="pass"></p>
+    <p>Confrim PW:  <input type="password" name="confirm"></p>
+    <button type="submit">Register</button>
+</form>
+    </div>
+    <div class="form-2">
+<h2>Login</h2>
+    <form action="/login" method="post">
+    {%csrf_token%}
+    <p>Email:  <input class="email" type="email" name="email-1"></p>
+    <p>Password:  <input type="password" name="pass_1"></p>
+    <button type="submit">Login</button>
+</form>
+</div>
+</div>
+</body>
+</html>
