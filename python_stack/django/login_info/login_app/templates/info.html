@@ -5,9 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User page</title>
-
     <style>
-        .top{
+        .top {
             display: flex;
         }
     </style>
@@ -15,11 +14,10 @@
 <body>
     <div class="top">
         <div>
-    <h2>Success! Welcome,{{new_user.first_name}}</h2>
-    <h2>Successfuly regeisterd!</h2>
+            <h2>Success! Welcome {{user_name.first_name}}</h2>
+            <!-- <h2>Successfuly regeisterd!</h2> -->
         </div>
-    
-    <a href="http://127.0.0.1:8000/">Log Out</a>
-</div>
+        <a href="http://127.0.0.1:8000/">Log Out</a>
+    </div>
 </body>
 </html>
