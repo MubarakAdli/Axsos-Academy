@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Codind Dojo Wall</title>
+<style>
+    
+    main{
+        display: flex;
+        justify-content: space-between;
+        margin: 0px auto;
+    }
+    .left-side{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    textarea{
+        height: 35px;
+        width: 335px;
+    }
+    .but{
+        background-color: #2b78e4;
+        color: white;
+        margin-left: 230px;
+    }
+    .but-1{
+        background-color: #009e0f;
+        color: white;
+        margin-left: 230px;
+    }
+
+    .welcome{
+        margin-right: 40px;
+    }
+    
+</style>
+    
+</head>
+<body>
+    <main>
+    <h2>CodingDojo Wall</h2>
+<div class="left-side">
+    <h3 class="welcome">Welcome {{user_name.first_name}} </h3>
+    <a href="http://127.0.0.1:8000/">Log Off</a>
+</div>
+</main>
+<form action="/message/{{user_name.id}}" method="post">
+    {%csrf_token%}
+    <h3>Post a message</h3>
+    <div><textarea name="message" id="" cols="30" rows="10"></textarea></div>
+    <button class="but" type="submit">Post a message</button>
+</form>
+{% for i in message %}
+<p>{{i.users.first_name}}  {{i.users.last_name}} - {{i.created_at}}</p>
+        <p>{{i.message}}</p>
+                {% for j in i.comments.all %}
+                        <p>{{j.users.first_name}} {{j.created_at}} </p>
+                                <p>{{j.comment}}</p>
+                {% endfor %}
+<form action="/comment/{{i.id}}/{{user_name.id}}" method="post">
+    {%csrf_token%}
+    <h3>Post a comment</h3>
+    <div><textarea name="comment" id="" cols="30" rows="10"></textarea></div>
+    <button class="but-1" type="submit">Post a comment</button>
+</form>
+{% endfor %}
+</body>
+</html>
