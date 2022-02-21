@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>liked books</title>
+</head>
+
+<body>
+    <nav>
+        <h1>Welcome, {{user_name.first_name}}!</h1>
+        <p><a href="http://127.0.0.1:8000/">Log out</a></p>
+    </nav>
+    <hr>
+    <section>
+        <div>
+            <p>{{book.title}}</p>
+            <p>Add by :{{book.uploaded_by.first_name}} {{book.uploaded_by.last_name}}</p>
+            <p>Add on : {{book.created_at}} </p>
+            <p>Last Updated : {{book.updated_at}} </p>
+            <p>Descriptions : {{book.desc}}</p>
+        </div>
+        <div>
+            <h2>User Who Like This Book</h2>
+            <ul>
+            {% for i in this_book.liked_books.all %}
+            <li>{{i.first_name}} {{i.last_name}}
+                {% if i.id == user.id %}
+            <a href="/delete/fav/{{book.id}}">Un-Favorite</a>
+            {% endif %}
+        </li>
+            {% if user not in this_book.users_who_like.all %}
+            <p><a href="/add_fav/{{book.id}}">Add to favorite</a></p>
+            {% endif %}
+            {% endfor %}
+        </ul>
+        </div>
+    </section>
+</body>
+
+</html>

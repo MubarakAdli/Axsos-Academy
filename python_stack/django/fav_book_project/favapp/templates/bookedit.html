@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Book</title>
+
+<style>
+    .top{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .row{
+        display: flex;
+        width: 300px;
+        justify-content: space-around;
+    }
+    .main{
+        display: flex;
+    }
+    .book{
+        margin-left: 400px;
+    }
+</style>
+</head>
+<body>
+    <div class="top"> 
+        <h3>Welcome, {{user_name.first_name}}!</h3>
+        <a href="http://127.0.0.1:8000/">Log Out</a>
+    </div>
+    <hr>
+    <div>{{book.title}}</div>
+    <div>Added by: {{book.uploaded_by.first_name}} {{book.uploaded_by.last_name}}</div>
+    <div>Added on: {{book.created_at}}</div>
+    <div>Last Updated: {{book.updated_at}}</div>
+
+    <form action="/update/{{book.id}}" method="post">
+        {csrf_token}
+        <textarea name="desc" cols="20" rows="5">{{book.desc}}</textarea>
+        <button type="submit">Delete</button>
+    </form>
+    <form action="/delete/{{book.id}}" method="post">
+        {csrf_token}
+        <button type="submit">Update</button>
+    </form>
+    <p>User Who Like This Book</p>
+    <ul>
+        {% for i in book.users_who_like.all %}
+        {% if i.id == user.id %}
+        <li>{{ i.first_name }} {{ i.last_name }}  <a href="/delete/fav/{{book.id}}">Un-Favorite</a></li>
+        {% else %}
+        <li>{{ i.first_name }} {{ i.last_name }} </li>
+        {% endif %}
+        {% endfor %}
+    </ul>
+</body>
+</html>

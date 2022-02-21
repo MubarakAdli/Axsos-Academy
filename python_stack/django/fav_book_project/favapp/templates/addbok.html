@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Book</title>
+
+<style>
+    .top{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .row{
+        display: flex;
+        width: 300px;
+        justify-content: space-around;
+    }
+    .main{
+        display: flex;
+    }
+    .book{
+        margin-left: 400px;
+    }
+</style>
+</head>
+<body>
+    <div class="top"> 
+        <h3>Welcome, {{user_name.first_name}}!</h3>
+        <a href="http://127.0.0.1:8000/">Log Out</a>
+    </div>
+    <hr>
+    <div class="main">
+        <div>
+            <form action="/addbook" method=POST>
+            {% csrf_token %}
+                <h3>Add a Favorite Book</h3>
+                <div class="row">Title <input type="text" name='title'></div>
+                <div class="row">Description  <textarea name="desc" cols="20" rows="5"></textarea></div>
+                <button type="submit">Add</button>
+            </form>
+        </div>
+        <div class="book">
+            <h4>All Books</h4>
+            {%for book in allbooks%}
+            <h3><a href="/books/{{book.id}}">{{book.title}}</a></h3>
+            <h3>(Added by {{book.uploaded_by.first_name}} {{book.uploaded_by.last_name}})</h3>
+                {%if user_name not in book.users_who_like.all %}
+                <p><a href="/add_fav/{{book.id}}">Add to favorites</a></p>
+                {%else%}
+                <p>this is one of your favorites</p>
+                {% endif %}
+            {%endfor%}
+        </div>
+    </div>
+</body>
+</html>
