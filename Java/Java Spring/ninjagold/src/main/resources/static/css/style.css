@@ -1,0 +1,39 @@
+.gold{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 230px;
+        }
+        .goldbox{
+            height: 30px;
+            width: 140px;
+            outline: 2px solid black;
+            text-align: center;
+        }
+        .container{
+            display:flex;
+            justify-content: space-between;
+            text-align: center;
+            width: 880px;
+        }
+        .box{
+            height: 155px;
+            width: 185px;
+            border: 2px solid black;
+        }
+        .bottom{
+            border: 2px solid black;
+            height: 150px;
+            width: 880px;
+        }
+        #gold{
+            margin-right: 110px;
+            margin-top: 6px;
+        }
+        button{
+            background-color: white;
+            box-shadow: 2px 2px 3px;
+        }
+        .bottom p{
+            margin-left: 20px;
+        }
