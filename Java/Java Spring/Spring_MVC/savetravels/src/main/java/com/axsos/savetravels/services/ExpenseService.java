@@ -3,6 +3,8 @@ package com.axsos.savetravels.services;
 import java.util.List;
 import java.util.Optional;
 
+import javax.validation.Valid;
+
 import org.springframework.boot.autoconfigure.security.ConditionalOnDefaultWebSecurity;
 import org.springframework.stereotype.Service;
 
@@ -24,32 +26,33 @@ private final ExpenseRepository expenseRepository;
         return expenseRepository.save(b);
     }
     // retrieves a expense
-    public Expense findExpense(Long id) {
-        Optional<Expense> optionalExpense = expenseRepository.findById(id);
-        if(optionalExpense.isPresent()) {
-            return optionalExpense.get();
-        } else {
-            return null;
-        }
+    public Expense getExpenseById(long id) {
+		Optional<Expense> lanOptional = expenseRepository.findById(id);
+		return lanOptional.orElse(null);
     }
     
-    public Expense updateExpense(long id , String name , String vendor,double amount,String descreption) {
-    	
-		Expense expense=findExpense(id);
-		if (expense != null) {
-			expense.setName(name);
-			expense.setAmount(amount);
-			expense.setDescription(descreption);
-			expense.setVendor(vendor);
-			
-			return expense;
-		}else {
-			return null;
-		}
-		
-    	
+//    public Expense updateExpense(long id , String name , String vendor,double amount,String descreption) {
+//    	
+//		Expense expense=getExpenseById(id);
+//		if (expense != null) {
+//			expense.setName(name);
+//			expense.setAmount(amount);
+//			expense.setDescription(descreption);
+//			expense.setVendor(vendor);
+//			expenseRepository.save(expense);
+//			
+//			return expense;
+//		}else {
+//			return null;
+//		}
+//		
+//    }
+    
+    public void deleteById(long id) {
+    	expenseRepository.deleteById(id);
     }
 
+	
 	
 
 }

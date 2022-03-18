@@ -36,6 +36,15 @@
 			.red{
 			color: red;
 			}
+			
+			.action{
+			display: flex;
+			justify-content: space-around;
+			}
+			.but{
+			color: white;
+			background-color: red;
+			}
     </style>
 </head>
 <body>
@@ -45,13 +54,23 @@
                 <th>Expense</th>
                 <th>Vendor</th>
                 <th>Amount</th>
+                <th>Actions</th>
                 
             </tr>
-           <c:forEach var="oneexpense" items="${expenses}">
+           <c:forEach var="expense" items="${expenses}">
             <tr>
-                <td><c:out value="${oneexpense.name}"></c:out></td>
-       			<td><c:out value="${oneexpense.vendor}"></c:out></td>
-                <td><c:out value="${oneexpense.amount}"></c:out></td>
+               <td><a href="/expenses/${expense.id}"><c:out
+							value="${expense.name}"></c:out></a></td>
+       			<td><c:out value="${expense.vendor}"></c:out></td>
+                <td><c:out value="${expense.amount}"></c:out></td>
+                <td>
+                <div class="action"><a href="/expenses/edit/${expense.id}">Edit</a>
+                <form action="/expenses/delete/${expense.id}" method="post">
+						    <input type="hidden" name="_method" value="delete">
+						    <input class="but" type="submit" value="Delete">
+						</form>
+						</div>
+						</td>  
             </tr>
             </c:forEach>
         </table>
