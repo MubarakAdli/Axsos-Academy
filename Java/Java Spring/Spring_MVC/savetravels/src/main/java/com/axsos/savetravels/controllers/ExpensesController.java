@@ -55,17 +55,16 @@ public class ExpensesController {
 		return "edit.jsp";
 	}
     
-//    @RequestMapping(value="/expense/update", method=RequestMethod.PUT)
-//	public String update(@Valid @ModelAttribute("expense") Expense expense,
-//			BindingResult result) {
-//		if (result.hasErrors()) {
-//			return "/expenses/edit.jsp";
-//		} else {
-//			expenseService.updateExpense(expense);
-//			return "redirect:/expenses";
-//		}
-//
-//	}
+    @RequestMapping(value="/expenses/update/{id}", method = RequestMethod.PUT)
+    public String update(@Valid @ModelAttribute("expensess") Expense expenses,BindingResult result) {
+    	if (result.hasErrors()) {
+            return "/edit.jsp";
+        } else {
+        	
+        expenseService.updateExpenses(expenses);
+        return "redirect:/expenses";
+        }
+    }
     
     @GetMapping("/expenses/{id}")
    	public String show(@PathVariable(value = "id") long id,Model model){

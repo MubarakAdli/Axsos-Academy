@@ -31,22 +31,15 @@ private final ExpenseRepository expenseRepository;
 		return lanOptional.orElse(null);
     }
     
-//    public Expense updateExpense(long id , String name , String vendor,double amount,String descreption) {
-//    	
-//		Expense expense=getExpenseById(id);
-//		if (expense != null) {
-//			expense.setName(name);
-//			expense.setAmount(amount);
-//			expense.setDescription(descreption);
-//			expense.setVendor(vendor);
-//			expenseRepository.save(expense);
-//			
-//			return expense;
-//		}else {
-//			return null;
-//		}
-//		
-//    }
+    public Expense updateExpenses(Expense expenses) {
+    	Expense editExpenses = expenseRepository.findById(expenses.getId()).orElse(null);
+    	assert editExpenses != null;
+    	editExpenses.setName(expenses.getName());
+    	editExpenses.setDescription(expenses.getDescription());
+    	editExpenses.setVendor(expenses.getVendor());
+    	editExpenses.setAmount(expenses.getAmount());
+    	return expenseRepository.save(editExpenses);
+    }
     
     public void deleteById(long id) {
     	expenseRepository.deleteById(id);
